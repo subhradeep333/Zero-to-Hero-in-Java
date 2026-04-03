@@ -35,7 +35,7 @@ class linear_search{
                 System.out.println("the number is at index: " + i);
             }
             else{
-                System.out.println("The element is not found!");
+                // System.out.println("The element is not found!");
             }
         }
     }
