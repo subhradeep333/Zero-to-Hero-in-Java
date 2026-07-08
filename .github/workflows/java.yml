@@ -2,27 +2,27 @@ name: Java CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
 
-      - name: Compile Java Files
+      - name: Compile each Java file
+        shell: bash
         run: |
-          find . -name "*.java" > sources.txt
-          javac @sources.txt
+          while IFS= read -r file
+          do
+            echo "Compiling $file"
+            javac "$file"
+          done < <(find . -name "*.java")
