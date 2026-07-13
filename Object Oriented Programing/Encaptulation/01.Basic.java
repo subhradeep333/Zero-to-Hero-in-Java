@@ -19,6 +19,7 @@ class Basic {
     private long mobile_no;
 
     //setters
+    // to assign a value to the private variables we use setters
     void setname(String name){
         this.name = name;
     }
@@ -32,6 +33,7 @@ class Basic {
     }
 
     //Getters
+    // to get the value of the private variables we use getters
     String getname(){
         return name;
     }
@@ -43,11 +45,16 @@ class Basic {
     long getmobile_no(){
         return mobile_no;
     }
-
+}
+    class Modi{
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
         Basic b = new Basic();
+
+        // b.setname("John");
+        // b.setsurname("Doe");
+        // b.setmobile_no(1234567890);
 
         System.out.print("Enter the name: ");
         b.setname(sc.nextLine());
@@ -62,3 +69,9 @@ class Basic {
 
     }
 }
+
+
+// Private; -> only accessible within the same class
+// default; -> only accessible within the same package
+// public; -> everyone can access
+// protected; -> inheritance

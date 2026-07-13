@@ -16,8 +16,9 @@ public class Main {
     }
 }
 
-// Stack
 
+
+// Stack
 // s1 --------+
 //            |
 // s2 -----+  |
