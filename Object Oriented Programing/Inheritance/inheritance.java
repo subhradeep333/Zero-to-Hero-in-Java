@@ -58,6 +58,8 @@ class ElectricCar extends Car{
         int seat=sc.nextInt();
         System.out.print("Enter Battery Capacity : ");
         int battery=sc.nextInt();
+
+        
         ElectricCar ob=new ElectricCar(battery, seat, bnd, mod);
         ob.showCarDetails();
         sc.close();
